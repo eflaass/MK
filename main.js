@@ -18,6 +18,8 @@ const player2 = {
   }
 };
 
+const $parentNode = document.querySelector('.arenas');
+
 const createPlayer = function (className, character) {
   const $player = document.createElement('div');
   $player.classList.add(className);
@@ -41,8 +43,6 @@ const createPlayer = function (className, character) {
   $img.src = character.img;
   $img.alt = character.name;
   $character.appendChild($img);
-
-  const $parentNode = document.querySelector('.arenas');
   $parentNode.appendChild($player);
 };
 
